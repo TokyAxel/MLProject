@@ -81,9 +81,12 @@
             <i></i>
           </span>
         </div>
-        <div class="result">
-          Prix estimé: <span></span>
+        <div class="col-3">
+          <div class="result">
+            Prix estimé: <span></span>
+          </div>
         </div>
+        
     </div>
     <footer class="text-center">
         <div class="footer-below">
@@ -195,7 +198,26 @@
           .toggleClass("opened");
         event.stopPropagation();
       });
-      $(".custom-option").on("click", function() {
+      // $(".custom-option").on("click", function() {
+      //   alert($(this).text())
+      //   $(this)
+      //     .parents(".custom-select-wrapper")
+      //     .find("select")
+      //     .val($(this).data("value")).change();
+      //   $(this)
+      //     .parents(".custom-options")
+      //     .find(".custom-option")
+      //     .removeClass("selection");
+      //   $(this).addClass("selection");
+      //   $(this)
+      //     .parents(".custom-select")
+      //     .removeClass("opened");
+      //   $(this)
+      //     .parents(".custom-select")
+      //     .find(".custom-select-trigger")
+      //     .text($(this).text());
+      // });
+      $('body').on('click', '.custom-option', function () {
         alert($(this).text())
         $(this)
           .parents(".custom-select-wrapper")
@@ -214,7 +236,6 @@
           .find(".custom-select-trigger")
           .text($(this).text());
       });
-
     </script>
 </body>
 </html>
